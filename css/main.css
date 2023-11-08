@@ -334,11 +334,11 @@ input[type=checkbox]{
 }
 
 .poland-orange-banner {
-    background-image: url("../../images/poland-orange-banner.webp");
+    background-image: url("../img/poland-orange-banner.webp");
 }
 
 .poland-orange.arrow-down {
-    background-image: url("../../images/arrow-down-p-orange.svg");
+    background-image: url("../img/arrow-down-p-orange.svg");
     background-size: cover;
     width: 14px;
     height: 8px;
@@ -472,7 +472,7 @@ input[type=checkbox]{
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../../images/arrow-down-p-orange.svg");
+    background-image: url("../img/arrow-down-p-orange.svg");
     width: 14px;
     height: 8px;
     transition: all 0.2s ease-in-out;
@@ -540,7 +540,7 @@ input[type=checkbox]{
     color: #D7D6D6;
     padding-left: 30px;
     padding-right: 30px;
-    background-image: url("../../images/footer-sparks-bg.webp");
+    background-image: url("../img/footer-sparks-bg.webp");
     background-size: cover;
     background-position: center bottom;
 }

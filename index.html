@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Landing Austria TMOBILE</title>
+    <title>Poland Orange Landing</title>
     <link rel="apple-touch-icon" href="favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,7 @@
                             id="main-subscribe-button"
                             class="main-subscribe-button"
                     >
-                        {{ translate('continue.btn') }}
+                        Subskrybuj
                     </button>
                     <a
                             href="century-mobile.com/austria_payment"
@@ -69,8 +69,8 @@
             </div>
         </div>
         <div class="element-wrapper" style="grid-area:11 / 1 / 12 / 10;z-index:1">
-            <a onclick="termsFunction()" class="poland-orange show-more-link"><i></i><span id="showBtnText">Przeczytaj więcej</span><i></i> {# {{ translate('landing.show.btn') }} #}</a>
-            {% block myJavascript %}
+            <a onclick="termsFunction()" class="poland-orange show-more-link"><i></i><span id="showBtnText">Przeczytaj więcej</span><i></i></a>
+
             <script type="text/javascript">
                 function termsFunction () {
                     const showBtn = document.querySelector("#showBtnText");
@@ -80,24 +80,22 @@
 
                     if (showBtnWrapper.classList.contains('active')) {
                         showBtnWrapper.classList.remove('active');
-                        showBtn.innerHTML = "{{ translate('landing.show.less.btn') | raw }}";
+                        showBtn.innerHTML = "Przeczytaj mniej";
                         termsAdd.classList.remove('active');
                         termsAdd.parentElement.style.cssText += 'grid-area: 12 / 1 / 15 / 10;';
                         footer.parentElement.style.cssText += 'grid-area: 15/1/17/10;';
                     } else {
                         showBtnWrapper.classList.add('active');
-                        showBtn.innerHTML = "{{ translate('landing.show.btn') | raw }}";
+                        showBtn.innerHTML = "Przeczytaj więcej";
                         termsAdd.classList.add('active');
                         termsAdd.parentElement.style.cssText += 'grid-area: 12/1/22/10;';
                         footer.parentElement.style.cssText += 'grid-area: 22/1/24/10;';
                     }
                 }
             </script>
-            {% endblock %}
         </div>
         <div class="element-wrapper" style="grid-area:12 / 1 / 15 / 10;z-index:1">
             <div class="poland-orange-terms terms-additional">
-                {#                {{ translate('terms.landing.text1') | raw }}#}
                 <p>Wypełnienie tego formularza oznacza akceptacje <a href="" class="poland-orange-link" target="_blank">Regulaminu Usługi</a></p>
 
                 <p>Opłata zostanie doliczona do Twojego konta u operatora (telefon na abonament) lub odjęta z salda konta (telefon na kartę).</p>
@@ -115,12 +113,12 @@
         <div class="element-wrapper" style="grid-area:15 / 1 / 17 / 10;z-index:1">
             <div class="poland-orange-footer">
                 <div class="footer-menu">
-                    <a href="/faq">FAQ{# {{ translate('lp.faq.page.title') }} #}</a>
-                    <a href="/contact-us">Kontakt{# {{ translate('lp.contact.page.title') }} #}</a>
-                    <a href="/terms">Zasady i warunki{# {{ translate('lp.tc.title') }} #}</a>
+                    <a href="/faq">FAQ</a>
+                    <a href="/contact-us">Kontakt</a>
+                    <a href="/terms">Zasady i warunki</a>
                 </div>
                 <div class="copyright austria-copyright">
-                    {{ translate('copyright.text') }}
+                    Next Move Digital 2023 Wszystkie prawa zastrzeżone
                 </div>
             </div>
         </div>
