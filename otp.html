@@ -147,20 +147,28 @@
             sendPhoneBtn.classList.remove('disabled');
 
             sendPhoneBtn.disabled = phoneInput.value.replace(/[ _]/g, '').length !== 9
-            sendPhoneBtn.classList.add(phoneInput.value.replace(/[ _]/g, '').length !== 9 ? 'disabled' : '')
-
-            phoneInput.classList.add(phoneInput.value.replace(/[ _]/g, '').length !== 9 ? 'not-validated' : 'validated')
+            if (phoneInput.value.replace(/[ _]/g, '').length !== 9){
+                sendPhoneBtn.classList.add('disabled');
+                sendPhoneBtn.disabled = true
+                phoneInput.classList.add('not-validated');
+            }
+            else{
+                sendPhoneBtn.classList.remove('disabled');
+                phoneInput.classList.remove('not-validated');
+                sendPhoneBtn.disabled = false
+            }
         });
 
-        document.querySelector('#send-phone-button').onClick(function (e) {
+        sendPhoneBtn.addEventListener('click', function(e){
             e.preventDefault();
             if (phoneInput.value.replace(/[ _]/g, '').length < 9 ) {
                 phoneInput.parentElement.classList.remove('validated');
                 phoneInput.parentElement.classList.add('not-validated');
                 sendPhoneBtn.disabled = false
-                e.target.classList.add('disabled');
+                sendPhoneBtn.classList.add('disabled');
             }
         })
+
     }
 </script>
 </body>
