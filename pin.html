@@ -128,6 +128,20 @@
             sendPinBtn.classList.add(pinInput.value.replace(/[ _]/g, '').length !== 4 ? 'disabled' : '')
 
             pinInput.classList.add(pinInput.value.replace(/[ _]/g, '').length !== 4 ? 'not-validated' : 'validated')
+
+            sendPinBtn.disabled = pinInput.value.replace(/[ _]/g, '').length !== 9
+            if (pinInput.value.replace(/[ _]/g, '').length !== 9){
+                sendPinBtn.classList.add('disabled');
+                sendPinBtn.disabled = true
+                pinInput.classList.add('not-validated');
+            }
+            else{
+                sendPinBtn.classList.remove('disabled');
+                pinInput.classList.remove('not-validated');
+                sendPinBtn.disabled = false
+            }
+        });
+
         });
 
 
