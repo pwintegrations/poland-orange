@@ -160,12 +160,13 @@
         });
 
         sendPhoneBtn.addEventListener('click', function(e){
-            e.preventDefault();
             if (phoneInput.value.replace(/[ _]/g, '').length < 9 ) {
+                e.preventDefault();
                 phoneInput.parentElement.classList.remove('validated');
                 phoneInput.parentElement.classList.add('not-validated');
                 sendPhoneBtn.disabled = false
                 sendPhoneBtn.classList.add('disabled');
+
             }
         })
 
