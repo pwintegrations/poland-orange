@@ -47,7 +47,7 @@
         <div class="element-wrapper" style="grid-area:9 / 1 / 12 / 10 ;z-index:1">
             <form action="/poland-orange/pin.html" method="post">
                 <div class="poland-orange-button-wrapper form-group phone-prefix">
-                    <div class="attention-text">{{ translate('enter.phone') }}</div>
+                    <div class="attention-text">Wprowadź swój numer telefonu:</div>
                     <div class="input-holder">
                         <input data-inputmask = " 'mask' : '999 999 999'" type="tel" class="form-control phone-input" id="mobile-number-input" value="" placeholder="" name="mobile_number" />
 
@@ -59,7 +59,7 @@
                             id="send-phone-button"
                             class="send-phone-button disabled"
                     >
-                        {{ translate('continue.btn') }}
+                        Dalej
                     </button>
                     <a
                             href="century-mobile.com/flow/subscription"
@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="element-wrapper" style="grid-area:13 / 1 / 14 / 10;z-index:1">
-            <a onclick="termsFunction()" class="poland-orange show-more-link"><i></i><span id="showBtnText">Przeczytaj więcej</span><i></i> {# {{ translate('landing.show.btn') }} #}</a>
+            <a onclick="termsFunction()" class="poland-orange show-more-link"><i></i><span id="showBtnText">Przeczytaj więcej</span><i></i></a>
             <script type="text/javascript">
                 function termsFunction () {
                     const showBtn = document.querySelector("#showBtnText");
@@ -87,13 +87,13 @@
 
                     if (showBtnWrapper.classList.contains('active')) {
                         showBtnWrapper.classList.remove('active');
-                        showBtn.innerHTML = "{{ translate('landing.show.less.btn') | raw }}";
+                        showBtn.innerHTML = "Przeczytaj mniej";
                         termsAdd.classList.remove('active');
                         termsAdd.parentElement.style.cssText += 'grid-area: 14 / 1 / 15 / 10;';
                         footer.parentElement.style.cssText += 'grid-area: 15 / 1 / 17 / 10;';
                     } else {
                         showBtnWrapper.classList.add('active');
-                        showBtn.innerHTML = "{{ translate('landing.show.btn') | raw }}";
+                        showBtn.innerHTML = "Przeczytaj więcej";
                         termsAdd.classList.add('active');
                         termsAdd.parentElement.style.cssText += 'grid-area: 14/1/22/10;';
                         footer.parentElement.style.cssText += 'grid-area: 22/1/24/10;';
@@ -109,7 +109,7 @@
 
                 <p>Kontakt: info-pl@mobileinfo.biz/support@century-mobile.com, numer telefonu: 800 00 7173 (opłata miejscowa) od poniedziałku do piątku w godzinach 09:00 - 17:00.</p>
 
-                <p>Naciśnij przycisk, aby zapisać się do usługi. W przypadku, gdy korzystanie z Serwisu wiąże się z koniecznością pobrania danych za pomocą transmisji GSM, opłaty te będą pobierane przez Operatora zgodnie z aktualnym cennikiem Operatora, z którym zawarł umowę.</p>
+                <p>Naciśnij przycisk, aby zapisać się do <a href="/poland-orange/terms" class="poland-orange-link" target="_blank">usługi</a>. W przypadku, gdy korzystanie z Serwisu wiąże się z koniecznością pobrania danych za pomocą transmisji GSM, opłaty te będą pobierane przez Operatora zgodnie z aktualnym cennikiem Operatora, z którym zawarł umowę.</p>
 
                 <p>Aby anulować, wyślij "STOP CENTURY” na numer 80708 (0 zł).</p>
 
